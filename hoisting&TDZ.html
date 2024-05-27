@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>practise</title>
+</head>
+<body>
+    <h2>hoisting defination</h2>
+    <p>
+        defination <br>
+        a variable can be used before it has been declared.
+    </p>
+    <script>
+        // #1
+        greet()
+        function greet() {
+            document.write(`hello`)
+        }
+
+        document.write(`<br><br>`);
+        
+        // #2
+            
+            document.write(a);
+            var a;  
+        
+        document.write(`<br><br>`);
+
+            // #3
+            
+            document.write(a);
+        document.write(`<br>`);
+
+            var a=3;//declaration hoisted to the  top but init is not (always)
+            document.write(a);
+
+        
+    </script>
+
+    <p>with let and const</p>
+    <script>
+        document.write(b);
+        let b; // const will behave same
+    </script>
+
+    <h2>tdz</h2>
+    <script>
+        {
+  // bestFood’s TDZ starts here (at the beginning of this block’s local scope)
+  // bestFood’s TDZ continues here
+  // bestFood’s TDZ continues here
+  // bestFood’s TDZ continues here
+  document.write(bestFood); // returns ReferenceError because bestFood’s TDZ continues here
+  // bestFood’s TDZ continues here
+  // bestFood’s TDZ continues here
+  let bestFood = "Vegetable Fried Rice"; // bestFood’s TDZ ends here
+  // bestFood’s TDZ does not exist here
+  // bestFood’s TDZ does not exist here
+  // bestFood’s TDZ does not exist here
+}
+    </script>
+    <p>hoisting works with var and tdz works with let, const</p>
+    <p>let and const donot host, they remains in tdz</p>
+</body>
+</html>

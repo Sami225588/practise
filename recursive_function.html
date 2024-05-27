@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>recursive function</title>
+</head>
+<body>
+    <script>
+        function recursive(x) {
+            if(x>5){
+                return `stop`;
+            }
+            else{
+                console.log(x);
+                x++;
+                recursive(x)
+            }
+        }
+        recursive(2)
+    </script>
+</body>
+</html>

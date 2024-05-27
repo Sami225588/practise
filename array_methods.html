@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>array methods</title>
+</head>
+<body>
+    <p> map(): Transforms each element of an array by applying a provided function and returns a new array with the transformed values.
+
+        • filter(): Creates a new array containing elements that pass a given condition or criteria defined by a provided function.
+        
+        • push(): Adds one or more elements to the end of an array and returns the updated length of the array.
+        
+        • unshift(): Adds one or more elements to the beginning of an array and returns the updated length of the array.
+        
+        • pop(): Removes the last element from the end of an array and returns that removed element.
+        
+        • shift(): Removes the first element from the beginning of an array and returns that removed element.
+        
+        • join(): Creates and returns a new string by concatenating all elements of an array with a specified separator between them.
+        
+        • concat(): Combines two or more arrays and returns a new array with all the elements from the combined arrays.
+        </p>
+    <script>
+        // Original array
+const numbers = [1, 2, 3, 4, 5];
+
+// Function to double a number
+const double = (num) => num * 2;
+
+// Using map to create a new array with doubled values
+const doubledNumbers = numbers.map(double);
+
+// Output the new array
+console.log(doubledNumbers); // [2, 4, 6, 8, 10]
+
+    </script>
+</body>
+</html>
